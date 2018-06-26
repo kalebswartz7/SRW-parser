@@ -7,14 +7,16 @@ parse-and-visualize
         :alt: Documentation Status
 
 
-Reads in a data file and vizualizes data withh image along with interactive horizontal and vertical cuts 
+Reads in a data file and vizualizes data with image along with interactive horizontal and vertical cuts 
 
 
 
 Features
 --------
 
-* TODO
+* User can specify specific data file
+* User can specify aspects of representation based on vertical/horizontal slice orientation, axis labels, title, extent 
+
 
 Credits
 -------
