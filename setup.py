@@ -43,7 +43,7 @@ setup(
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/kalebswartz7/parse_and_visualize',
-    version='0.0.1',
+    url='https://github.com/kalebswartz7/parse-and-visualize',
+    version='0.0.2',
     zip_safe=False,
 )
