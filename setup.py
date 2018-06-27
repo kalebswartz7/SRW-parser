@@ -4,6 +4,7 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+import versioneer
 
 with open('README.rst') as readme_file:
     readme = readme_file.read()
@@ -19,6 +20,8 @@ setup_requirements = [ ]
 test_requirements = [ ]
 
 setup(
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     author="Kaleb Robert Swartz",
     author_email='kalebswartz7@gmail.com',
     classifiers=[
