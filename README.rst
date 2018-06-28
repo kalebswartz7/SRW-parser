@@ -5,6 +5,9 @@ parse-and-visualize
 .. image:: https://readthedocs.org/projects/parse-and-visualize/badge/?version=latest
         :target: https://parse-and-visualize.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
+        
+.. image:: https://travis-ci.com/kalebswartz7/parse-and-visualize.svg?branch=master
+    :target: https://travis-ci.com/kalebswartz7/parse-and-visualize
 
 
 Reads in a data file and vizualizes data with image along with interactive horizontal and vertical cuts 
