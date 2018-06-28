@@ -20,6 +20,7 @@ setup_requirements = [ ]
 test_requirements = [ ]
 
 setup(
+    name='parse_and_visualize',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="Kaleb Robert Swartz",
@@ -42,12 +43,10 @@ setup(
     long_description=readme + '\n\n' + history,
     include_package_data=True,
     keywords='parse_and_visualize',
-    name='parse_and_visualize',
     packages=find_packages(include=['parse_and_visualize']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/kalebswartz7/parse-and-visualize',
-    version='0.0.5',
     zip_safe=False,
 )
