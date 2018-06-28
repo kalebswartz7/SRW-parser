@@ -32,7 +32,7 @@ setup(
     description="Reads in a data file and vizualizes data withh image along with interactive horizontal and vertical cuts ",
     install_requires=requirements,
     license="Apache Software License 2.0",
-    long_description=readme + '\n\n' + history,
+    long_description=readme,
     include_package_data=True,
     keywords='parse_and_visualize',
     packages=find_packages(include=['parse_and_visualize']),
