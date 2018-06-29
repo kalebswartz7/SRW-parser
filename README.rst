@@ -8,14 +8,14 @@ Reads in a data file and vizualizes data with image along with interactive horiz
 
 
 
-Features
+Features:
 --------
 
 * User can specify specific data file
 * User can specify aspects of representation based on vertical/horizontal slice orientation, axis labels, title, extent 
 
 
-Credits
+Credits:
 -------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
