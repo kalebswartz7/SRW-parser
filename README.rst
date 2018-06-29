@@ -1,7 +1,8 @@
 ===================
 SRW-parser
 ===================
-
+.. image:: https://travis-ci.com/kalebswartz7/parse-and-visualize.svg?branch=master
+    :target: https://travis-ci.com/kalebswartz7/parse-and-visualize
 
 Reads in a data file and vizualizes data with image along with interactive horizontal and vertical cuts 
 
