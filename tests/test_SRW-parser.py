@@ -6,7 +6,7 @@
 
 import unittest
 
-from SRW_parser import SRW_parser
+from SRW-parser import SRW-parser
 
 
 class TestSRW_parser(unittest.TestCase):
