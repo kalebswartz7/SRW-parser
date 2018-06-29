@@ -41,4 +41,7 @@ setup(
     tests_require=test_requirements,
     url='https://github.com/kalebswartz7/parse-and-visualize',
     zip_safe=False,
+    entry_points={
+        "console_scripts": ['SRW-parser = parse_and_visualize.parse_and_visualize:cli']
+    },
 )

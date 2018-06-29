@@ -161,7 +161,7 @@ def populate_matrix_smart(matrix, horizontal, vertical):
     return matrix
 
 
-if __name__ == '__main__':
+def cli():
     import argparse
 
     parser = argparse.ArgumentParser(description='Plot image based on input file')
@@ -237,3 +237,6 @@ if __name__ == '__main__':
         cs.update_image(matrix)
         plt.show()
 
+
+if __name__ == '__main__':
+    cli()
