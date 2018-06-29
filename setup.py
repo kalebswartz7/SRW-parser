@@ -17,7 +17,7 @@ setup_requirements = [ ]
 test_requirements = [ ]
 
 setup(
-    name='parse_and_visualize',
+    name='SRW-parser',
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     author="Kaleb Robert Swartz",
@@ -34,14 +34,14 @@ setup(
     license="Apache Software License 2.0",
     long_description=readme,
     include_package_data=True,
-    keywords='parse_and_visualize',
-    packages=find_packages(include=['parse_and_visualize']),
+    keywords='SRW-parser',
+    packages=find_packages(include=['SRW-parser']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/kalebswartz7/parse-and-visualize',
+    url='https://github.com/kalebswartz7/SRW-parser',
     zip_safe=False,
     entry_points={
-        "console_scripts": ['SRW-parser = parse_and_visualize.parse_and_visualize:cli']
+        "console_scripts": ['SRW-parser = SRW-parser.SRW-parser:cli']
     },
 )

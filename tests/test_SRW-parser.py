@@ -6,11 +6,11 @@
 
 import unittest
 
-from parse_and_visualize import parse_and_visualize
+from SRW_parser import SRW_parser
 
 
-class TestParse_and_visualize(unittest.TestCase):
-    """Tests for `parse_and_visualize` package."""
+class TestSRW-parser(unittest.TestCase):
+    """Tests for `SRW-parser` package."""
 
     def setUp(self):
         """Set up test fixtures, if any."""

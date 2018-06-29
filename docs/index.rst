@@ -1,4 +1,4 @@
-Welcome to parse-and-visualize's documentation!
+Welcome to SRW-parser's documentation!
 ======================================
 
 .. toctree::

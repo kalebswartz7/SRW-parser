@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=parse_and_visualize
+set SPHINXPROJ=SRW-parser
 
 if "%1" == "" goto help
 

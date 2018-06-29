@@ -1,4 +1,4 @@
-* parse-and-visualize version:
+* SRW-parser version:
 * Python version:
 * Operating System:
 

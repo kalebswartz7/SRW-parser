@@ -8,13 +8,13 @@ Installation
 Stable release
 --------------
 
-To install parse-and-visualize, run this command in your terminal:
+To install SRW-parser, run this command in your terminal:
 
 .. code-block:: console
 
-    $ pip install parse_and_visualize
+    $ pip install SRW-parser
 
-This is the preferred method to install parse-and-visualize, as it will always install the most recent stable release.
+This is the preferred method to install SRW-parser, as it will always install the most recent stable release.
 
 If you don't have `pip`_ installed, this `Python installation guide`_ can guide
 you through the process.
@@ -32,13 +32,13 @@ You can either clone the public repository:
 
 .. code-block:: console
 
-    $ git clone git://github.com/kalebswartz7/parse_and_visualize
+    $ git clone git://github.com/kalebswartz7/SRW-parser
 
 Or download the `tarball`_:
 
 .. code-block:: console
 
-    $ curl  -OL https://github.com/kalebswartz7/parse_and_visualize/tarball/master
+    $ curl  -OL https://github.com/kalebswartz7/SRW-parser/tarball/master
 
 Once you have a copy of the source, you can install it with:
 
@@ -47,5 +47,5 @@ Once you have a copy of the source, you can install it with:
     $ python setup.py install
 
 
-.. _Github repo: https://github.com/kalebswartz7/parse_and_visualize
-.. _tarball: https://github.com/kalebswartz7/parse_and_visualize/tarball/master
+.. _Github repo: https://github.com/kalebswartz7/SRW-parser
+.. _tarball: https://github.com/kalebswartz7/SRW-parser/tarball/master
