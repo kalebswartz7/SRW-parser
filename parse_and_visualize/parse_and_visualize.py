@@ -181,8 +181,11 @@ def cli():
 
     initial_data = {'photon': {}, 'horizontal': {}, 'vertical': {},}
     matrix = [[]]
-
-    get_parameters(initial_data)
+    try:
+        get_parameters(initial_data)
+    except:
+        print('no data file found')
+        quit()
     horizontal = initial_data['horizontal']['points']
     vertical = initial_data['vertical']['points']
 
