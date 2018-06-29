@@ -42,6 +42,6 @@ setup(
     url='https://github.com/kalebswartz7/SRW-parser',
     zip_safe=False,
     entry_points={
-        "console_scripts": ['SRW-parser = SRW-parser.SRW-parser:cli']
+        "console_scripts": ['SRW-parser=SRW_parser.SRW_parser:cli']
     },
 )
