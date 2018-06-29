@@ -9,7 +9,7 @@ import unittest
 from SRW_parser import SRW_parser
 
 
-class TestSRW-parser(unittest.TestCase):
+class TestSRW_parser(unittest.TestCase):
     """Tests for `SRW-parser` package."""
 
     def setUp(self):
