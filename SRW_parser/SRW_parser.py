@@ -14,7 +14,7 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 
 
-def get_parameters(d):
+def get_parameters(d, file_name=None):
     """
     Read in first 10 lines of input file to get parameters for data
 
@@ -24,7 +24,9 @@ def get_parameters(d):
         dictionary that is going to be populated by the parameter data
 
     """
-    with open('res_int_pr_se.dat') as file:
+    if file_name is None:
+        file_name = 'res_int_pr_se.dat'
+    with open(file_name) as file:
         for i in range(10):
             line = file.readline()
             if '/' in line:
@@ -140,7 +142,7 @@ def _unit_change(value_to_be_changed, unit):
 
 
 
-def populate_matrix_smart(matrix, horizontal, vertical):
+def populate_matrix_smart(matrix, horizontal, vertical, data_file=None):
     """
     Reads in all non-commented data from file, parses into 2D array based
     on Horizontal and Vertical Points (using numpy)
@@ -155,7 +157,10 @@ def populate_matrix_smart(matrix, horizontal, vertical):
         # of vertical rows in matrix
 
     """
-    d = np.loadtxt('res_int_pr_se.dat')
+    if data_file is None:
+        d = np.loadtxt('res_int_pr_se.dat')
+    else:
+        d = np.loadtxt(data_file)
     d2 = d.reshape((vertical, horizontal))
     matrix = d2
     return matrix
@@ -167,6 +172,8 @@ def cli():
     parser = argparse.ArgumentParser(description='Plot image based on input file')
     parser.add_argument('-d', '--dat_file', dest='dat_file', default='',
                         help ='input .dat file')
+    parser.add_argument('-g', '--graph', dest='graph', default='',
+                        help='create graph', action='store_true')
     parser.add_argument('-vp', '--vert_pos', dest='vert_pos', default='',
                         help='input vertical slice position', type=str)
     parser.add_argument('-hp', '--horiz_pos', dest='horiz_pos', default='',
@@ -177,27 +184,20 @@ def cli():
                         help='input horizontal label string', type=str)
     parser.add_argument('-e', '--extent_labels', dest='extent_labels', default=None,
                         help='input extent labels for image ranges', nargs='+', type=int)
+    parser.add_argument('-t', '--title', dest='title',default=None,
+                        help='input title', type=str)
     args = parser.parse_args()
 
     initial_data = {'photon': {}, 'horizontal': {}, 'vertical': {},}
     matrix = [[]]
     try:
-        get_parameters(initial_data)
+        get_parameters(initial_data, file_name=args.dat_file)
     except:
-        print('no data file found')
+        print('no data file found - specify with (-d <filename>)')
         quit()
     horizontal = initial_data['horizontal']['points']
     vertical = initial_data['vertical']['points']
-
-    horizontal_initial = _unit_change(initial_data['horizontal']
-                                      ['initial_position'], 'micro')
-    horizontal_final = _unit_change(initial_data['horizontal']
-                                    ['final_position'], 'micro')
-    vertical_initial = _unit_change(initial_data['vertical']
-                                    ['initial_position'], 'micro')
-    vertical_final = _unit_change(initial_data['vertical']
-                                  ['final_position'], 'micro')
-    if args.dat_file:
+    if args.graph and args.dat_file:
         img = np.loadtxt(args.dat_file)
         img = img.reshape((vertical, horizontal))
         fig = plt.figure()
@@ -221,24 +221,18 @@ def cli():
 
         if args.extent_labels:
             kwargs['extent_labels'] = args.extent_labels
+        if args.title:
+            kwargs['title'] = args.title
 
         cs = CrossSection(**kwargs)
         cs.update_image(img)
         plt.show()
     else:
+        if args.dat_file:
+            file = args.dat_file
+            matrix = populate_matrix_smart(matrix, horizontal, vertical, data_file=file)
+            print(initial_data)
 
-        matrix = populate_matrix_smart(matrix, horizontal, vertical)
-        fig = plt.figure(figsize=(8, 10))
-        title = f'After Propagation (E={initial_data["photon"]["initial_energy"]} {initial_data["photon"]["units"]})'
-        axis_data = [initial_data['horizontal']['axis_label'] + " [µm]",
-                     initial_data['vertical']['axis_label'] + " [µm]",
-                     "Intensity " + initial_data['intensity']]
-        cs = CrossSection(fig, horiz_loc= 'top', vert_loc='right', title=title,
-                         vert_label=axis_data[1], horiz_label=axis_data[0],
-                         extent_labels=[horizontal_initial, horizontal_final, vertical_initial, vertical_final])
-
-        cs.update_image(matrix)
-        plt.show()
 
 
 if __name__ == '__main__':
