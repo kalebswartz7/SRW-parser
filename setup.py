@@ -39,7 +39,7 @@ setup(
     setup_requires=setup_requirements,
     extras_require = {
         'matplotlib' : [], 'pyqt5' : [], 'xray-vision' : []
-        }
+        },
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/kalebswartz7/SRW-parser',
