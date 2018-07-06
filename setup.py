@@ -12,6 +12,10 @@ with open('README.rst') as readme_file:
 with open('requirements.txt') as f:
     requirements = f.read().split()
 
+extras_require = {
+        'matplotlib' : ['matplotlib >= 2.2.2'], 'pyqt5' : ['pyqt5 >= 5.10.1'], 'xray-vision' : ['xray-vision >= 0.0.8']
+        }
+extras_require['complete'] = sorted(set(sum(extras_require.values(), [])))
 setup_requirements = [ ]
 
 test_requirements = [ ]
@@ -37,9 +41,7 @@ setup(
     keywords='SRW_parser',
     packages=find_packages(include=['SRW_parser']),
     setup_requires=setup_requirements,
-    extras_require = {
-        'matplotlib' : [], 'pyqt5' : [], 'xray-vision' : []
-        },
+    extras_require = extras_require,
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/kalebswartz7/SRW-parser',
