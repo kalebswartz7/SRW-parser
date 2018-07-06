@@ -5,13 +5,6 @@
 #       Use this data to add to the graph
 
 import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.ticker as ticker
-import matplotlib.transforms as tf
-from xray_vision.backend.mpl.cross_section_2d import CrossSection
-from matplotlib import gridspec
-from mpl_toolkits.axes_grid1 import make_axes_locatable
-
 
 
 def get_parameters(d, file_name=None):
@@ -198,6 +191,10 @@ def cli():
     horizontal = initial_data['horizontal']['points']
     vertical = initial_data['vertical']['points']
     if args.graph and args.dat_file:
+
+        import matplotlib.pyplot as plt
+        from xray_vision.backend.mpl.cross_section_2d import CrossSection
+
         img = np.loadtxt(args.dat_file)
         img = img.reshape((vertical, horizontal))
         fig = plt.figure()
