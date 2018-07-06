@@ -6,7 +6,16 @@ SRW-parser
 
 Reads in a data file and vizualizes data with image along with interactive horizontal and vertical cuts 
 
+Installation:
+-------------
+Lightweight installation with only data parsing capabilities - 
+::
 
+    pip install SRW-parser
+Full installation with graphing capabilities - 
+:: 
+
+    pip install "SRW-parser[complete]"
 
 Features:
 --------
