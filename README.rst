@@ -60,6 +60,11 @@ Features:
 
     SRW-parser -d <file_name> -g -e <horiz_initial, vert_initial, horiz_final, vert_final>
     
+Examples:
+--------
+.. image:: images/top_left.gif.sb-94d62f7e-42Y6dn
+
+    
 Credits:
 -------
 
