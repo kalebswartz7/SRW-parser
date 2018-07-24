@@ -63,7 +63,7 @@ Features:
 Examples:
 --------
 .. image:: images/left_top.gif
-
+.. image:: images/bottom_right.gif
     
 Credits:
 -------
