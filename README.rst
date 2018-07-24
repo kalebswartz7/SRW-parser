@@ -62,7 +62,7 @@ Features:
     
 Examples:
 --------
-.. image:: images/top_left.gif.sb-94d62f7e-42Y6dn
+.. image:: images/left_top.gif
 
     
 Credits:
