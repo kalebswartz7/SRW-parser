@@ -13,7 +13,7 @@ with open('requirements.txt') as f:
     requirements = f.read().split()
 
 extras_require = {
-        'matplotlib' : ['matplotlib >= 2.2.2'], 'pyqt5' : ['pyqt5 >= 5.10.1'], 'xray-vision' : ['xray-vision >= 0.0.8']
+        'matplotlib' : ['matplotlib >= 2.2.2'], 'pyqt5' : ['pyqt5 < 5.11'], 'xray-vision' : ['xray-vision >= 0.0.8']
         }
 extras_require['complete'] = sorted(set(sum(extras_require.values(), [])))
 setup_requirements = [ ]
