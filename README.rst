@@ -21,7 +21,14 @@ Features:
 --------
 
 * User can specify specific data file
-* User can specify aspects of representation based on vertical/horizontal slice orientation, axis labels, title, extent 
+::
+
+    SRW-parser -d <file_name>
+    
+* User can specify if they want the data to be graphed with an interactive plot showing horizontal and vertical cuts 
+::
+
+    SRW-parser -d <file_name> -g
 
 
 Credits:
