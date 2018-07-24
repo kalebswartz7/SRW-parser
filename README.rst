@@ -20,17 +20,46 @@ Full installation with graphing capabilities -
 Features:
 --------
 
-* User can specify specific data file
+* Specify specific data file
 ::
 
     SRW-parser -d <file_name>
     
-* User can specify if they want the data to be graphed with an interactive plot showing horizontal and vertical cuts 
+* Specify if they want the data to be graphed with an interactive plot showing horizontal and vertical cuts 
 ::
 
     SRW-parser -d <file_name> -g
+    
+* Specify title of graph 
+::
 
+    SRW-parser -d <file_name> -g -t <title>
+    
+* Specify location of vertical cut
+::
 
+    SRW-parser -d <file_name> -g -vp <right or left>
+ 
+* Specify location of horizontal cut
+::
+
+    SRW-parser -d <file_name> -g -vp <top or bottom>
+    
+* Specify vertical axis label 
+::
+
+    SRW-parser -d <file_name> -g -vl <label>
+    
+* Specify horizontal axis label
+::
+
+    SRW-parser -d <file_name> -g -hl <label>
+    
+* Specify extent lables
+::
+
+    SRW-parser -d <file_name> -g -e <horiz_initial, vert_initial, horiz_final, vert_final>
+    
 Credits:
 -------
 
