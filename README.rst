@@ -25,7 +25,7 @@ Features:
 
     SRW-parser -d <file_name>
     
-* Specify if they want the data to be graphed with an interactive plot showing horizontal and vertical cuts 
+* Specify data to be graphed with an interactive plot showing horizontal and vertical cuts 
 ::
 
     SRW-parser -d <file_name> -g
